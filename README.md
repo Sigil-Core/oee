@@ -33,7 +33,7 @@ Every OEE vertical uses the same enforcement layer:
 ┌─────────────────────────┐
 │      Sigil Sign         │  ← Deterministic execution firewall
 │  Sigil Lex evaluates    │
-│  ASSURANCE.md policy    │
+│   warranty.md policy    │
 └────────────┬────────────┘
              │ Intent Attestation (Ed25519 JWT)
              ▼
@@ -57,12 +57,12 @@ oee/
 ├── core/                  ← Shared enforcement primitives
 │   ├── README.md
 │   ├── sigil-action-provider.js
-│   └── ASSURANCE.example.md
+│   └── warranty.example.md
 ├── verticals/             ← Domain-specific implementations
 │   ├── README.md
 │   └── venture/           ← Open Venture Engine (OVE)
 │       ├── README.md
-│       ├── ASSURANCE.md
+│       ├── warranty.md
 │       ├── agent/
 │       ├── contracts/
 │       ├── integrations/
