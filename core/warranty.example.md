@@ -1,13 +1,13 @@
-# ASSURANCE Policy
-<!-- Sigil Lex — ASSURANCE.md Format Reference -->
+# Warranty Policy
+<!-- Sigil Lex — warranty.md format reference -->
 <!--
   This file documents the format that Sigil Lex expects.
-  Copy to config/ASSURANCE.md and customise for your deployment.
+  Copy to config/warranty.md and customise for your deployment.
 
-  config/ASSURANCE.md is gitignored — never commit the live policy file.
-  LEX_ASSURANCE_PATH defaults to config/ASSURANCE.md (relative to process.cwd()).
+  config/warranty.md is gitignored — never commit the live policy file.
+  LEX_WARRANTY_PATH defaults to config/warranty.md (relative to process.cwd()).
 
-  Sign this file using the Sigil ASSURANCE.md Drafter at sigilcore.com before deploying.
+  Sign this file using Sigil Warrant at sigilcore.com before deploying.
 -->
 
 version: 1.0.0
