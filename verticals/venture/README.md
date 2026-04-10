@@ -48,7 +48,7 @@ OVE separates the agent's decision-making from its execution authority.
 ┌─────────────────────────┐
 │      Sigil Sign         │  ← OEE Core enforcement layer
 │  Sigil Lex evaluates    │
-│  ASSURANCE.md policy    │
+│   warranty.md policy    │
 └────────────┬────────────┘
              │ Intent Attestation (Ed25519 JWT)
              ▼
@@ -65,7 +65,7 @@ The Brain proposes. Sigil authorizes. The Engine executes — only after attesta
 
 ## Policy Configuration
 
-OVE ships with a venture capital-tuned `ASSURANCE.md` template. Copy it to `config/ASSURANCE.md` and customize for your fund mandate.
+OVE ships with a venture capital-tuned `warranty.md` template. Copy it to `config/warranty.md` and customize for your fund mandate.
 
 Key Class 1 defaults:
 - `max_transaction_eth: 31.25` (~$100,000 at 3,200 USD/ETH)
@@ -75,7 +75,7 @@ Key Class 1 defaults:
 Key Class 3 default:
 - `consensus_threshold_eth: 23.4` (~$75,000) — triggers a human approval hold
 
-These are starting points. Your fund's legal mandate should drive the final values. Use the [ASSURANCE.md Drafter](https://sigilcore.com) to generate and sign your policy.
+These are starting points. Your fund's legal mandate should drive the final values. Use [Sigil Warrant](https://sigilcore.com) to generate and sign your policy.
 
 ---
 
@@ -84,7 +84,7 @@ These are starting points. Your fund's legal mandate should drive the final valu
 ```
 verticals/venture/
 ├── README.md                   ← This file
-├── ASSURANCE.md                ← VC-tuned policy template
+├── warranty.md                 ← VC-tuned policy template
 ├── agent/                      ← Agent orchestration logic
 ├── contracts/                  ← ERC-6551, Safe, Superfluid templates
 ├── integrations/               ← AgentKit and ElizaOS adapters
@@ -101,8 +101,8 @@ git clone https://github.com/Sigil-Core/oee.git
 cd oee/verticals/venture
 
 # Copy and configure your policy
-cp ASSURANCE.md config/ASSURANCE.md
-# Edit config/ASSURANCE.md for your fund mandate
+cp warranty.md config/warranty.md
+# Edit config/warranty.md for your fund mandate
 # Sign it at sigilcore.com before deploying
 
 # Install dependencies
