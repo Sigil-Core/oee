@@ -1,15 +1,15 @@
-# ASSURANCE Policy — Open Venture Engine (OVE)
+# Warranty Policy — Open Venture Engine (OVE)
 <!-- Sigil Lex — Venture Capital Deployment Template -->
 <!--
   Pre-tuned for autonomous VC and fund deployment.
 
-  Copy to config/ASSURANCE.md and customise for your fund mandate.
-  config/ASSURANCE.md is gitignored — never commit the live policy file.
+  Copy to config/warranty.md and customise for your fund mandate.
+  config/warranty.md is gitignored — never commit the live policy file.
 
   Limits below use 1 ETH = $3,200 USD as the conversion baseline.
   Adjust to your fund's actual mandate and current ETH price before deploying.
 
-  Sign this file using the Sigil ASSURANCE.md Drafter at sigilcore.com before deploying.
+  Sign this file using Sigil Warrant at sigilcore.com before deploying.
 -->
 
 version: 1.0.0
