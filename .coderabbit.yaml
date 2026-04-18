@@ -1,59 +1,33 @@
-# .coderabbit.yaml — drop into each repo root
-# Adjust path_instructions per repo; this example covers both
-# agent-hooks (npm/TS) and agent-hooks-rs (Rust/crates.io) patterns.
+# .coderabbit.yaml — oee (Open Execution Engine, documentation/specification repo)
 
 reviews:
-  # Auto-review every PR
   auto_review:
     enabled: true
 
   path_instructions:
-    # Rust-specific paths (agent-hooks-rs)
-    - path: "src/**/*.rs"
+    - path: "core/**/*.md"
       instructions: |
-        - Verify unsafe blocks are justified and documented.
-        - Check error handling uses thiserror or anyhow consistently.
-        - Flag any unwrap() or expect() outside of tests.
-        - Confirm public API changes are semver-appropriate.
+        OEE is the domain-agnostic enforcement substrate for Sigil.
+        - Verify warranty templates follow the established schema.
+        - Check that policy evaluation logic descriptions are deterministic, not probabilistic.
+        - Flag any language that implies optional enforcement — OEE enforcement is mandatory.
 
-    - path: "deny.toml"
+    - path: "verticals/**"
       instructions: |
-        - Verify license exceptions are scoped to exact crate+version.
-        - Flag any blanket license allows.
-        - Check advisory ignores have expiration comments or upstream references.
+        Vertical-specific extensions of OEE.
+        - Verify each vertical references core OEE primitives correctly.
+        - Check that vertical-specific rules do not conflict with core enforcement.
 
-    - path: "Cargo.toml"
+    - path: "architecture.md"
       instructions: |
-        - Confirm version follows semver.
-        - Check for wildcard dependency versions.
-        - Verify publish metadata (description, license, repository) is present.
-
-    # TypeScript/Node paths (agent-hooks)
-    - path: "src/**/*.ts"
-      instructions: |
-        - Check for proper error handling (no swallowed promises).
-        - Verify exported types are documented.
-        - Flag any use of 'any' type.
-
-    - path: "package.json"
-      instructions: |
-        - Confirm version follows semver.
-        - Check that publish metadata (name, version, main/exports, license) is present.
-        - Flag missing or overly broad files/exports config.
-
-    # Tests in either language
-    - path: "tests/**"
-      instructions: |
-        Ensure tests cover edge cases, not just happy paths.
-        Flag tests that assert on implementation details rather than behavior.
+        Public-facing architecture document.
+        - Verify descriptions match the current implementation in sigil-sign and sigil-vault.
+        - Flag any claims about features not yet shipped.
+        - Check that cryptographic descriptions are precise (Ed25519, JWT, attestation lifecycle).
 
     - path: "**/*.md"
       instructions: |
-        Check for accuracy against the current code.
-        Flag stale references or outdated instructions.
+        Check for internal consistency across documents. Flag contradictions between files.
 
   path_filters:
-    - "!target/**"
-    - "!node_modules/**"
-    - "!dist/**"
-    - "!*.lock"
+    - "!.claude/**"
