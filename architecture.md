@@ -49,7 +49,7 @@ Four typed policy blocks are evaluated in order:
 
 OEE returns one of three decisions for every intent:
 
-- **ALLOWED**: intent is within policy. A signed Intent Attestation is issued immediately.
+- **APPROVED**: intent is within policy. A signed Intent Attestation is issued immediately.
 - **DENIED**: intent violates a hard policy rule. No attestation. Execution blocked.
 - **PENDING**: intent exceeds a soft limit. A consensus hold is created with a 24-hour TTL. The agent cannot execute the held action until a human resolves the hold.
 

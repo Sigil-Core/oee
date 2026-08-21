@@ -12,10 +12,10 @@
   "allowedOccurrences": [
     {
       "path": "architecture.md",
-      "literal": "ALLOWED",
-      "expression": "- **ALLOWED**: intent is within policy. A signed Intent Attestation is issued immediately.",
+      "literal": "APPROVED",
+      "expression": "- **APPROVED**: intent is within policy. A signed Intent Attestation is issued immediately.",
       "expectedCount": 1,
-      "reason": "Current architecture documentation for the canonical success outcome."
+      "reason": "Current Wave 1 architecture documentation for the legacy success outcome; cleanup follows the emitter flip."
     }
   ]
 }
