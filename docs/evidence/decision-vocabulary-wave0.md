@@ -40,3 +40,10 @@ Trigger map version 1.1 classifies this diff as security-seam because
 `.github/workflows/decision-literal-gate.yml` matches
 `.github/workflows/**`. The minimality ladder is off. The final exact-head
 review must use the security-seam gate.
+
+## Greptile update-review activation proof
+
+This pull request includes an evidence-only follow-up commit after the v3
+`triggerOnUpdates` setting became active. Merge remains blocked until Greptile
+reviews that exact follow-up head. The hosted review receipt is recorded in the
+central execution run log rather than copied into this source artifact.
