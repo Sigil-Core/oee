@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "scanPaths": [
+    "."
+  ],
+  "excludedPaths": [
+    "decision-literal-allowlist.json",
+    "docs/evidence/decision-vocabulary-wave0.md",
+    "scripts/decision_literal_gate.py",
+    "tests/decision_literal_gate_proof.py"
+  ],
+  "allowedOccurrences": [
+    {
+      "path": "architecture.md",
+      "literal": "APPROVED",
+      "expression": "- **APPROVED**: intent is within policy. A signed Intent Attestation is issued immediately.",
+      "expectedCount": 1,
+      "reason": "Current Wave 1 architecture documentation for the legacy success outcome; cleanup follows the emitter flip."
+    }
+  ]
+}
